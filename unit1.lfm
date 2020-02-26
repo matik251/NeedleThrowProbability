@@ -1,0 +1,243 @@
+object tlo: Ttlo
+  Left = 200
+  Height = 500
+  Top = 100
+  Width = 800
+  Caption = 'Rzuty igla- Prawdopodobieństwo'
+  ClientHeight = 500
+  ClientWidth = 800
+  LCLVersion = '1.6.0.4'
+  object tlo: TShape
+    Left = 0
+    Height = 210
+    Top = 0
+    Width = 200
+    BorderSpacing.CellAlignHorizontal = ccaCenter
+    OnChangeBounds = tloChangeBounds
+  end
+  object srodek: TShape
+    Left = 100
+    Height = 4
+    Top = 103
+    Width = 4
+    Brush.Color = clRed
+    OnChangeBounds = srodekChangeBounds
+  end
+  object l1: TShape
+    Left = 0
+    Height = 2
+    Top = 0
+    Width = 200
+    Brush.Color = clBlack
+    OnChangeBounds = l1ChangeBounds
+  end
+  object l2: TShape
+    Left = 0
+    Height = 2
+    Top = 52
+    Width = 200
+    Brush.Color = clBlack
+    OnChangeBounds = l1ChangeBounds
+  end
+  object l3: TShape
+    Left = 0
+    Height = 2
+    Top = 104
+    Width = 200
+    Brush.Color = clBlack
+    OnChangeBounds = l1ChangeBounds
+  end
+  object l4: TShape
+    Left = 0
+    Height = 2
+    Top = 156
+    Width = 200
+    Brush.Color = clBlack
+    OnChangeBounds = l1ChangeBounds
+  end
+  object l5: TShape
+    Left = 0
+    Height = 2
+    Top = 208
+    Width = 200
+    Brush.Color = clBlack
+    OnChangeBounds = l1ChangeBounds
+  end
+  object Start: TBitBtn
+    Left = 283
+    Height = 26
+    Top = 23
+    Width = 150
+    Caption = 'Start'
+    OnClick = StartClick
+    TabOrder = 0
+  end
+  object StaticText1: TStaticText
+    Left = 283
+    Height = 35
+    Top = 56
+    Width = 461
+    Caption = 'StaticText1'
+    TabOrder = 1
+  end
+  object prawy: TShape
+    Left = 150
+    Height = 4
+    Top = 103
+    Width = 4
+    Brush.Color = clRed
+  end
+  object StaticText2: TStaticText
+    Left = 283
+    Height = 44
+    Top = 107
+    Width = 461
+    Caption = 'StaticText2'
+    TabOrder = 2
+  end
+  object Lewy: TShape
+    Left = 50
+    Height = 4
+    Top = 103
+    Width = 4
+    Brush.Color = clRed
+  end
+  object stopni90: TBitBtn
+    Left = 465
+    Height = 21
+    Top = 27
+    Width = 136
+    Caption = 'stopni90'
+    OnClick = stopni90Click
+    TabOrder = 3
+  end
+  object StaticText3: TStaticText
+    Left = 281
+    Height = 50
+    Top = 162
+    Width = 463
+    Caption = 'StaticText3'
+    TabOrder = 4
+  end
+  object Lewy2: TShape
+    Left = 75
+    Height = 4
+    Top = 103
+    Width = 4
+    Brush.Color = clRed
+    OnChangeBounds = Lewy2ChangeBounds
+  end
+  object prawy2: TShape
+    Left = 125
+    Height = 4
+    Top = 103
+    Width = 4
+    Brush.Color = clRed
+  end
+  object Stop: TButton
+    Left = 623
+    Height = 19
+    Top = 29
+    Width = 127
+    Caption = 'Stop'
+    OnClick = StopClick
+    TabOrder = 5
+  end
+  object TrackBar1: TTrackBar
+    Left = 8
+    Height = 23
+    Top = 216
+    Width = 784
+    Max = 1000
+    Min = 1
+    OnChange = TrackBar1Change
+    Position = 1000
+    TabOrder = 6
+  end
+  object StaticText4: TStaticText
+    Left = 6
+    Height = 22
+    Top = 243
+    Width = 37
+    Caption = '100/s'
+    OnClick = StaticText4Click
+    TabOrder = 7
+  end
+  object StaticText5: TStaticText
+    Left = 760
+    Height = 22
+    Top = 240
+    Width = 37
+    Caption = '1/s'
+    OnClick = StaticText4Click
+    TabOrder = 8
+  end
+  object StaticText6: TStaticText
+    Left = 272
+    Height = 40
+    Top = 256
+    Width = 272
+    Caption = 'Częstotliwosc rzutów igly: 1/s'
+    OnClick = StaticText6Click
+    TabOrder = 9
+  end
+  object Label1: TLabel
+    Left = 17
+    Height = 15
+    Top = 304
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 17
+    Height = 15
+    Top = 328
+    Width = 34
+    Caption = 'Label2'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 17
+    Height = 15
+    Top = 355
+    Width = 34
+    Caption = 'Label3'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 30
+    Top = 384
+    Width = 60
+    Caption = 'Label4'
+    Font.Height = 30
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 16
+    Height = 15
+    Top = 475
+    Width = 217
+    Caption = 'Wynik w postaci x*E +/-y , to x*10^(+/-y)'
+    ParentColor = False
+    OnClick = Label5Click
+  end
+  object Label6: TLabel
+    Left = 16
+    Height = 15
+    Top = 424
+    Width = 173
+    Caption = '(wszystkie-nietrafione/wszystkie)'
+    ParentColor = False
+    OnClick = Label6Click
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 200
+    OnTimer = Timer1Timer
+    left = 752
+    top = 56
+  end
+end
